@@ -24,7 +24,8 @@ RUN set -xe; \
     tar zvxf MEGAHIT-1.2.9-Linux-x86_64-static.tar.gz && \
     mv MEGAHIT-1.2.9-Linux-x86_64-static MEGAHIT && \
     cd /usr/bin && \
-    ln -s $HOME/tools/MEGAHIT/bin/megahit megahit;
+    ln -s $HOME/tools/MEGAHIT/bin/megahit megahit && \
+    rm MEGAHIT-1.2.9-Linux-x86_64-static.tar.gz;
 
 # Reverts to standard user.
 USER cabana
